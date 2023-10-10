@@ -1,6 +1,6 @@
 import openai
 
-openai.api_key = "" 
+openai.api_key = "" # Enter your own secret api key
 
 def chat_with_gpt(prompt):
     response = openai.ChatCompletion.create(
