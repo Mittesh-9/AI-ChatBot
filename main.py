@@ -1,6 +1,6 @@
 import openai
 
-openai.api_key = "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"
+openai.api_key = "" 
 
 def chat_with_gpt(prompt):
     response = openai.ChatCompletion.create(
@@ -12,4 +12,9 @@ def chat_with_gpt(prompt):
 
 if __name__ =="__main__":
     while True :
-        user_input = input("You:")
+        user_input = input("You :")
+        if user_input.lower() in ["quit", "exit", "bye"]:
+            break
+
+        response = chat_with_gpt(user_input)
+        print("Chatbot : ", response)
